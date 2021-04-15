@@ -3,12 +3,17 @@ const letterTextInput = document.querySelector('#carta-texto');
 const generatedLetter = document.querySelector('#carta-gerada');
 
 function createLetter() {
-  const wordsArray = letterTextInput.value.split(' ');
-  for (let index = 0; index < wordsArray.length; index += 1) {
+  if (letterTextInput.value.trim().length === 0) {
     const newSpan = document.createElement('span');
-    console.log(wordsArray[index]);
-    newSpan.innerText = wordsArray[index].concat(' ');
+    newSpan.innerText = 'Por favor, digite o conteúdo da carta.';
     generatedLetter.appendChild(newSpan);
+  } else {
+    const wordsArray = letterTextInput.value.split(' ');
+    for (let index = 0; index < wordsArray.length; index += 1) {
+      const newSpan = document.createElement('span');
+      newSpan.innerText = wordsArray[index].concat(' ');
+      generatedLetter.appendChild(newSpan);
+    }
   }
 }
 
