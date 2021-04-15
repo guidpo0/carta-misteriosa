@@ -1,6 +1,7 @@
 const createLetterBtn = document.querySelector('#criar-carta');
 const letterTextInput = document.querySelector('#carta-texto');
 const generatedLetter = document.querySelector('#carta-gerada');
+const letterCounter = document.querySelector('#carta-contador');
 const misteryClass = {
   styleGroup: ['newspaper', 'magazine1', 'magazine2'],
   sizeGroup: ['medium', 'big', 'reallybig'],
@@ -20,7 +21,8 @@ function createLetter() {
     newSpan.innerText = 'Por favor, digite o conteúdo da carta.';
     generatedLetter.appendChild(newSpan);
   } else {
-    const wordsArray = letterTextInput.value.split(' ');
+    const wordsArray = letterTextInput.value.trim().split(' ');
+    letterCounter.innerText = wordsArray.length;    
     for (let index = 0; index < wordsArray.length; index += 1) {
       const newSpan = document.createElement('span');
       newSpan.innerText = wordsArray[index].concat(' ');
