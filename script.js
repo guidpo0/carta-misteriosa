@@ -5,8 +5,8 @@ const letterCounter = document.querySelector('#carta-contador');
 const allClass = {
   styleGroup: ['newspaper', 'magazine1', 'magazine2'],
   sizeGroup: ['medium', 'big', 'reallybig'],
-  rotationGroup: ['roeeft', 'rotateright'],
-  inclineGroup: ['seft', 'skewright'],
+  rotationGroup: ['rotateleft', 'rotateright'],
+  inclineGroup: ['skewleft', 'skewright'],
 };
 
 function randomArrayPosition(array) {
@@ -30,11 +30,13 @@ function createLetter() {
       newSpan.classList.add(allClass.sizeGroup[randomArrayPosition(allClass.sizeGroup)]);
       newSpan.classList.add(allClass.rotationGroup[randomArrayPosition(allClass.rotationGroup)]);
       newSpan.classList.add(allClass.inclineGroup[randomArrayPosition(allClass.inclineGroup)]);
-      generatedLetter.appendCheewSpan);
+      generatedLetter.appendChild(newSpan);
     }
-e
-[creaeterBtn].forEach((item) => {
-  item.addEveetener('click', () => {
+  }
+}
+
+[createLetterBtn].forEach((item) => {
+  item.addEventListener('click', () => {
     if (item === createLetterBtn) {
       createLetter();
     }
