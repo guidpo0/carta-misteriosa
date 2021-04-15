@@ -12,15 +12,27 @@
   <title>Document</title>
 </head>
 <body>
-  <input id="carta-texto" type="text" placeholder="Digite aqui o conteúdo da carta">
+  <header>
+    <h1>Carta Misteriosa</h1>
+  
+    <input id="carta-texto" type="text" placeholder="Digite aqui o conteúdo da carta">
+  
+    <button id="criar-carta">Criar carta</button>
+  </header>
 
-  <button id="criar-carta">Criar carta</button>
+  <main>
+    <p id="carta-gerada"></p>
+  
+    <p class="word-counter">Quantidade de palavras:</p>
+  
+    <p id="carta-contador" class="word-counter"></p>
+  </main>
 
-  <p id="carta-gerada"></p>
+  <footer>
+    <h2>Desenvolvido por Guilherme Pereira de Oliveira, abril de 2021.</h2>
+  </footer>
+  
 
-  <p>Quantidade de palavras:</p>
-
-  <p id="carta-contador"></p>
 
   <script src="script.js"></script>
 </body>
