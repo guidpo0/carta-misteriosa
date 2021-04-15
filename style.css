@@ -1,5 +1,5 @@
 .newspaper {
-  background-color: rgb(250, 235, 215);
+  background-color: antiquewhite;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
 }
@@ -10,4 +10,11 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.magazine2 {
+  background-image: 'images/pink-pattern.png';
+  color: fuchsia;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
 }
