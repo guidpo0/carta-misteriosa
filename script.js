@@ -2,15 +2,15 @@ const createLetterBtn = document.querySelector('#criar-carta');
 const letterTextInput = document.querySelector('#carta-texto');
 const generatedLetter = document.querySelector('#carta-gerada');
 const letterCounter = document.querySelector('#carta-contador');
-const misteryClass = {
+const allClass = {
   styleGroup: ['newspaper', 'magazine1', 'magazine2'],
   sizeGroup: ['medium', 'big', 'reallybig'],
   rotationGroup: ['rotateleft', 'rotateright'],
-  inclinationGroup: ['skewleft', 'skewright']
+  inclinationGroup: ['skewleft', 'skewright'],
 };
 
 function randomArrayPosition(array) {
-  const randomPosition = Math.round(Math.random()*(array.length - 1));
+  const randomPosition = Math.round(Math.random() * (array.length - 1));
   return randomPosition;
 }
 
@@ -22,14 +22,14 @@ function createLetter() {
     generatedLetter.appendChild(newSpan);
   } else {
     const wordsArray = letterTextInput.value.trim().split(' ');
-    letterCounter.innerText = wordsArray.length;    
+    letterCounter.innerText = wordsArray.length;
     for (let index = 0; index < wordsArray.length; index += 1) {
       const newSpan = document.createElement('span');
       newSpan.innerText = wordsArray[index].concat(' ');
-      newSpan.classList.add(misteryClass.styleGroup[randomArrayPosition(misteryClass.styleGroup)]);
-      newSpan.classList.add(misteryClass.sizeGroup[randomArrayPosition(misteryClass.sizeGroup)]);
-      newSpan.classList.add(misteryClass.rotationGroup[randomArrayPosition(misteryClass.rotationGroup)]);
-      newSpan.classList.add(misteryClass.inclinationGroup[randomArrayPosition(misteryClass.inclinationGroup)]);
+      newSpan.classList.add(allClass.styleGroup[randomArrayPosition(allClass.styleGroup)]);
+      newSpan.classList.add(allClass.sizeGroup[randomArrayPosition(allClass.sizeGroup)]);
+      newSpan.classList.add(allClass.rotationGroup[randomArrayPosition(allClass.rotationGroup)]);
+      newSpan.classList.add(allClass.inclinationGroup[randomArrayPosition(allClass.inclinationGroup)]);
       generatedLetter.appendChild(newSpan);
     }
   }
