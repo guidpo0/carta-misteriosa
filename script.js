@@ -3,6 +3,7 @@ const letterTextInput = document.querySelector('#carta-texto');
 const generatedLetter = document.querySelector('#carta-gerada');
 
 function createLetter() {
+  generatedLetter.innerHTML = '';
   if (letterTextInput.value.trim().length === 0) {
     const newSpan = document.createElement('span');
     newSpan.innerText = 'Por favor, digite o conteúdo da carta.';
