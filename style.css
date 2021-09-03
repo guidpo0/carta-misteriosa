@@ -10,6 +10,10 @@ h2 {
   bottom: 0%;
 }
 
+main {
+  margin-bottom: 40px;
+}
+
 .word-counter {
   display: inline-block;
 }
@@ -17,6 +21,8 @@ h2 {
 #carta-texto {
   width: 80%;
   margin-bottom: 30px;
+  padding: 5px;
+  border-radius: 8px;
 }
 
 .newspaper {
@@ -31,6 +37,21 @@ h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+#criar-carta {
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+#carta-gerada {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .magazine2 {
